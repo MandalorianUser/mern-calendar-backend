@@ -28,6 +28,7 @@ router.post('/new',
 ],
 crearUsuario);
 
+
 router.get('/renew',revalidarJWT, revalidarToken);
 
 

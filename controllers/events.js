@@ -91,7 +91,7 @@ const deleteEvent = async (req, res = response) => {
 
     try {
         const event = await Evento.findById(eventId)
-
+        console.log("Se encontro el evento a erliminar, ",event)
         if (!event) {
             return res.status(404).json({
                 ok: false,
@@ -100,6 +100,7 @@ const deleteEvent = async (req, res = response) => {
         }
 
         if (event.user.toString() !== uid) {
+            console.log("Dentro del DeleteEvent Backend")
             return res.status(401).json({
                 ok: false,
                 msg: "No tienes privilegios para eliminar este evento"
