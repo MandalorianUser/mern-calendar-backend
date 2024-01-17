@@ -39,7 +39,7 @@ const crearUsuario = async (req, res = response) => {
         console.log(error)
         res.status(500).json({
             ok: false,
-            msg: 'Por favor hable con el administrador'
+            msg: 'Please talk to somewhone'
         })
     }
 }
